@@ -59,7 +59,7 @@
 
 运行效果如图所示：
 
-
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Lab_5_1_anew1.png">
 
 2、笔记查询功能（根据标题查询）
 
