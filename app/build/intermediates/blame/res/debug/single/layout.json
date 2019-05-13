@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\export_text.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\layout\\export_text.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\noteslist_item.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\layout\\noteslist_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_search_list.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\layout\\note_search_list.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_color.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\layout\\note_color.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_editor.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\layout\\note_editor.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\title_editor.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\layout\\title_editor.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\title_editor.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\layout\\title_editor.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\export_text.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\layout\\export_text.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_color.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\layout\\note_color.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_editor.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\layout\\note_editor.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\note_search_list.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\layout\\note_search_list.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\layout\\noteslist_item.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\layout\\noteslist_item.xml"
+    }
+]

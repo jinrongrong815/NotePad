@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAntiqueWhite">#faebd7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#a2f7da</color>
+    <color name="colorLightCoral">#f1a79f</color>
+    <color name="colorPink">#FFC0CB</color>
+    <color name="colorPrimary">#faebd7</color>
+    <color name="colorSkyBlue">#9afcf7</color>
+    <color name="colorViolet">#DDA0DD</color>
+    <color name="colorWhite">#ffffff</color>
+    <string name="app_name">NotePad</string>
+    <string name="button_ok">OK</string>
+    <string name="error_message">Error loading note</string>
+    <string name="error_title">Error</string>
+    <string name="export_name">Export</string>
+    <string name="export_ok">OK</string>
+    <string name="live_folder_name">Notes</string>
+    <string name="menu_add">New note</string>
+    <string name="menu_color">Change background color</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_export">Export</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_paste">Paste</string>
+    <string name="menu_revert">Revert changes</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_sort">Sort</string>
+    <string name="menu_sort1">Sort by creation time</string>
+    <string name="menu_sort2">Sort by modification time</string>
+    <string name="menu_sort3">Sort by color</string>
+    <string name="nothing_to_save">There is nothing to save</string>
+    <string name="resolve_edit">Edit note</string>
+    <string name="resolve_title">Edit title</string>
+    <string name="text_title">Title:</string>
+    <string name="title_create">New note</string>
+    <string name="title_edit">Edit: %1$s</string>
+    <string name="title_edit_title">Note title:</string>
+    <string name="title_notes_list">Notes</string>
+    <string name="title_notes_search">Search</string>
+    <style name="AppTheme">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+</resources>

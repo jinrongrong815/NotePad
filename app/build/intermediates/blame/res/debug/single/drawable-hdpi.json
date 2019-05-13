@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\app_notes.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\app_notes.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_revert.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_revert.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_edit.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_edit.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_revert.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_revert.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\app_notes.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\app_notes.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_delete.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_delete.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_save.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_save.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_edit.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_edit.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_save.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_save.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_compose.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_compose.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_delete.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_delete.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\live_folder_notes.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\live_folder_notes.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_menu_compose.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\ic_menu_compose.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\live_folder_notes.png",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\drawable-hdpi\\live_folder_notes.png"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\menu\\editor_options_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\menu\\editor_options_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_context_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\menu\\list_context_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_options_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\menu\\list_options_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\menu\\editor_options_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad-master01\\NotePad\\app\\src\\main\\res\\menu\\editor_options_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_options_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\menu\\list_options_menu.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects\\NotePad\\app\\build\\intermediates\\res\\merged\\debug\\menu\\list_context_menu.xml",
+        "source": "E:\\AndroidStudioProjects\\NotePad\\app\\src\\main\\res\\menu\\list_context_menu.xml"
+    }
+]
