@@ -274,13 +274,13 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
          }
     }
     
-    新建笔记，默认背景色为白色,结合下一个功能可使背景色更换：
+新建笔记，默认背景色为白色,结合下一个功能可使背景色更换：
     
-    <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/bg1.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/bg1.jpg">
     
-    保存后：
+保存后：
     
-    <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/bg2.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/bg2.jpg">
     
     
 ### 4、背景更换
