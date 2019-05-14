@@ -108,9 +108,7 @@
               NotesList.this.startActivity(intent);
               return true;
 
-对SearchView文本变化设置监听，使NoteSearch继承ListView并实现SearchView.OnQueryTextListener接口，以动态地显示搜索结果：
-
-***NoteSearch.java***
+新建***NoteSearch.java***activity,使NoteSearch继承ListActivity并实现SearchView.OnQueryTextListener接口,对SearchView文本变化设置监听，以动态地显示搜索结果：
 
 public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextListener {
 
