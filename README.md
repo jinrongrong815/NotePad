@@ -583,7 +583,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
                     ps.println("创建时间：" + CREATE_DATE);
                     ps.println("最后一次修改时间：" + MODIFICATION_DATE);
                     ps.close();
-                    Toast.makeText(this, "保存成功,保存位置：" + sdCardDir.getCanonicalPath() + "/" + mName.getText() + ".txt", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "保存成功,保存位置：" + sdCardDir.getCanonicalPath() + "/" + mName.getText() + ".txt",              Toast.LENGTH_LONG).show();
                 }
             }
             catch (Exception e) {
@@ -592,3 +592,24 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
         }
     }
     
+在笔记列表中选择需要导出的笔记，这里选择第二条笔记：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export1.jpg">
+    
+点击进入笔记，在右上角三点菜单中找到Export导出笔记功能，点击，出现对话框：
+ 
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export2.jpg">
+    
+点击OK，提示保存成功和保存位置：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export3.jpg">
+    
+到保存位置去查看文件：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedexport4_LI.jpg">
+
+打开文件：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export5.jpg">
+    
+
