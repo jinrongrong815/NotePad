@@ -1,26 +1,26 @@
 # 期中实验：基于NotePad应用做功能扩展
 
-一、实验内容
+## 一、实验内容
 
-1、基本要求：
+### 1、基本要求：
 
 1）NoteList中显示条目增加时间戳显示
 
 2）添加笔记查询功能（根据标题查询）
 
-2、附加功能
+### 2、附加功能
 
 1）UI美化
 
-2）更改记事本的背景
+2）背景更换
 
 3）导出笔记
 
 4）笔记排序
 
-二、关键步骤及效果截图
+## 二、关键步骤及效果截图
 
-1、NoteList中显示条目增加时间戳显示
+### 1、NoteList中显示条目增加时间戳显示
 
 在***notelist_item.xml***布局中，添加显示时间的TextView
 
@@ -66,7 +66,7 @@
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/time.jpg">
 
-2、笔记查询功能（根据标题查询）
+### 2、笔记查询功能（根据标题查询）
 
 在菜单文件***list_options_menu.xml***中添加一个搜索的item，搜索图标用Android自带的图标:
 
@@ -199,3 +199,389 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search2.jpg">
 
+### 3、UI美化
+
+将主题换成白色，同时使NoteList和NoteSearch的每条笔记都有自己的背景颜色且能保存到数据库中，首先在契约类NotePad中添加一个颜色的字段：
+
+    public static final String COLUMN_NAME_BACK_COLOR = "color";
+    
+同时在NotePad中预定义好背景色，每一种颜色对应不同的int值：
+
+    public static final int DEFAULT_COLOR = 0; //白
+    public static final int ANTIQUE_WHITE_COLOR = 1;
+    public static final int SKY_BLUE_COLOR = 2;
+    public static final int VIOLET_COLOR = 3;
+    public static final int PINK_COLOR = 4;
+    public static final int GREEN_COLOR = 5;
+    public static final int LIGHT_CORAL_COLOR = 6;
+    public static final int BLACK_COLOR = 7;
+
+在创建数据库表的地方添加颜色字段：
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE " + NotePad.Notes.TABLE_NAME + " ("
+                + NotePad.Notes._ID + " INTEGER PRIMARY KEY,"
+                + NotePad.Notes.COLUMN_NAME_TITLE + " TEXT,"
+                + NotePad.Notes.COLUMN_NAME_NOTE + " TEXT,"
+                + NotePad.Notes.COLUMN_NAME_CREATE_DATE + " INTEGER,"
+                + NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE + " INTEGER,"
+                + NotePad.Notes.COLUMN_NAME_BACK_COLOR + " INTEGER" //颜色数据
+                + ");");
+    }
+
+自定义一个MyCursorAdapter类继承SimpleCursorAdapter，既能完成cursor读取的数据库内容填充到item，又能将颜色填充：
+
+    public class MyCursorAdapter extends SimpleCursorAdapter {
+
+         public MyCursorAdapter(Context context, int layout, Cursor c,
+                           String[] from, int[] to) {
+                super(context, layout, c, from, to);
+         }
+
+         @Override
+         public void bindView(View view, Context context, Cursor cursor){
+                super.bindView(view, context, cursor);
+                //从数据库中读取的cursor中获取笔记列表对应的颜色数据，并设置笔记颜色
+                int x = cursor.getInt(cursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_BACK_COLOR));
+
+                switch (x){
+                    case NotePad.Notes.DEFAULT_COLOR:
+                        view.setBackgroundColor(Color.rgb(255, 255, 255));
+                        break;
+                    case NotePad.Notes.ANTIQUE_WHITE_COLOR:
+                        view.setBackgroundColor(Color.rgb(250, 235, 215));
+                        break;
+                    case NotePad.Notes.SKY_BLUE_COLOR:
+                        view.setBackgroundColor(Color.rgb(154,252,247));
+                        break;
+                    case NotePad.Notes.VIOLET_COLOR:
+                        view.setBackgroundColor(Color.rgb(221, 160, 221));
+                        break;
+                    case NotePad.Notes.PINK_COLOR:
+                        view.setBackgroundColor(Color.rgb(255, 192, 203));
+                        break;
+                    case NotePad.Notes.GREEN_COLOR:
+                        view.setBackgroundColor(Color.rgb(162, 247, 218));
+                        break;
+                    case NotePad.Notes.LIGHT_CORAL_COLOR:
+                        view.setBackgroundColor(Color.rgb(241, 167, 159));
+                        break;
+                    default:
+                        view.setBackgroundColor(Color.rgb(255, 255, 255));
+                        break;
+                }
+         }
+    }
+    
+    新建笔记，默认背景色为白色,结合下一个功能可使背景色更换：
+    
+    <>
+    
+### 4、背景更换
+
+首先先在菜单文件***editor_options_menu.xml***中添加一个更改背景的选项：
+
+    <item android:id="@+id/menu_color"
+        android:title="@string/menu_color"
+        android:icon="@drawable/color_logo"
+        android:showAsAction="always"/>
+ 
+新建布局文件***note_color.xml***，垂直线性布局放置7个ImageButton：
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/color_white"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:onClick="white"/>
+
+        <ImageButton
+            android:id="@+id/color_antiquewhite"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorAntiqueWhite"
+            android:onClick="antique_white"/>
+
+        <ImageButton
+            android:id="@+id/color_sky_blue"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorSkyBlue"
+            android:onClick="sky_blue"/>
+
+        <ImageButton
+            android:id="@+id/color_violet"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorViolet"
+            android:onClick="violet"/>
+
+        <ImageButton
+            android:id="@+id/color_pink"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorPink"
+            android:onClick="pink"/>
+
+        <ImageButton
+            android:id="@+id/color_green"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorGreen"
+            android:onClick="green"/>
+
+        <ImageButton
+            android:id="@+id/color_light_coral"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/colorLightCoral"
+            android:onClick="light_coral"/>
+
+    </LinearLayout>
+
+新建***NoteColor.java***Acitvity文件，用来选择颜色：
+
+    public class NoteColor extends Activity {
+
+        private Cursor mCursor;
+        private Uri mUri;
+        private int color;
+        private static final int COLUMN_INDEX_TITLE = 1;
+
+        private static final String[] PROJECTION = new String[] {
+                NotePad.Notes._ID, // 0
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR,
+        };
+
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.note_color);
+            mUri = getIntent().getData();
+            mCursor = managedQuery(
+                    mUri,        // The URI for the note that is to be retrieved.
+                    PROJECTION,  // The columns to retrieve
+                    null,        // No selection criteria are used, so no where columns are needed.
+                    null,        // No where columns are used, so no where values are needed.
+                    null         // No sort order is needed.
+            );
+
+        }
+
+        @Override
+        protected void onResume(){
+            if (mCursor != null) {
+                mCursor.moveToFirst();
+                color = mCursor.getInt(COLUMN_INDEX_TITLE);
+            }
+            super.onResume();
+        }
+
+        @Override
+        protected void onPause() {
+            super.onPause();
+            ContentValues values = new ContentValues();
+            values.put(NotePad.Notes.COLUMN_NAME_BACK_COLOR, color);
+            getContentResolver().update(mUri, values, null, null);
+
+        }
+
+        public void white(View view){
+            color = NotePad.Notes.DEFAULT_COLOR;
+            finish();
+        }
+
+        public void antique_white(View view){
+            color = NotePad.Notes.ANTIQUE_WHITE_COLOR;
+            finish();
+        }
+
+        public void sky_blue(View view){
+            color = NotePad.Notes.SKY_BLUE_COLOR;
+            finish();
+        }
+        public void violet(View view){
+            color = NotePad.Notes.VIOLET_COLOR;
+            finish();
+        }
+
+        public void pink(View view){
+            color = NotePad.Notes.PINK_COLOR;
+            finish();
+        }
+
+        public void green(View view){
+            color = NotePad.Notes.GREEN_COLOR;
+            finish();
+        }
+
+        public void light_coral(View view){
+            color = NotePad.Notes.LIGHT_CORAL_COLOR;
+            finish();
+        }
+
+    }
+    
+修改笔记列表中名为背景色笔记的背景色：
+
+<>
+
+选择修改颜色的图标:
+
+<>
+
+任选一种颜色，这里选择紫色，保存：
+
+<>
+
+返回笔记列表查看修改情况：
+
+<>
+
+### 5、导出笔记
+
+在菜单文件***editor_options_menu.xml***中添加一个导出笔记的选项：
+
+    <item android:id="@+id/menu_output"
+          android:title="@string/menu_export" />
+          
+新建布局文件***export_text.xml***：
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:paddingBottom="3dip">
+
+        <EditText android:id="@+id/output_name"
+            android:maxLines="1"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="wrap_content"
+            android:ems="25"
+            android:layout_height="wrap_content"
+            android:autoText="true"
+            android:capitalize="sentences"
+            android:scrollHorizontally="true" />
+
+        <Button android:id="@+id/output_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/export_ok"
+            android:onClick="OutputOk" />
+
+    </LinearLayout>
+    
+新建一个***NoteExport.java***Activity，用来导出笔记：
+
+    public class NoteExport extends Activity {
+
+        private static final String[] PROJECTION = new String[] {
+                NotePad.Notes._ID, // 0
+                NotePad.Notes.COLUMN_NAME_TITLE, // 1
+                NotePad.Notes.COLUMN_NAME_NOTE, // 2
+                NotePad.Notes.COLUMN_NAME_CREATE_DATE, // 3
+                NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, // 4
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR, //5
+        };
+
+        private String TITLE;
+        private String NOTE;
+        private String CREATE_DATE;
+        private String MODIFICATION_DATE;
+
+        private Cursor mCursor;
+        private EditText mName;
+        private Uri mUri;
+
+        private boolean flag = false;
+
+        private static final int COLUMN_INDEX_TITLE = 1;
+
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.export_text);
+
+            mUri = getIntent().getData();
+            mCursor = managedQuery(
+                    mUri,        // The URI for the note that is to be retrieved.
+                    PROJECTION,  // The columns to retrieve
+                    null,        // No selection criteria are used, so no where columns are needed.
+                    null,        // No where columns are used, so no where values are needed.
+                    null         // No sort order is needed.
+            );
+
+            mName = (EditText) findViewById(R.id.output_name);
+        }
+
+        @Override
+        protected void onResume(){
+            super.onResume();
+            if (mCursor != null) {
+                // The Cursor was just retrieved, so its index is set to one record *before* the first
+                // record retrieved. This moves it to the first record.
+                mCursor.moveToFirst();
+                // Displays the current title text in the EditText object.
+                mName.setText(mCursor.getString(COLUMN_INDEX_TITLE));
+            }
+        }
+
+        @Override
+        protected void onPause() {
+            super.onPause();
+            if (mCursor != null) {
+                TITLE = mCursor.getString(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_TITLE));
+                NOTE = mCursor.getString(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_NOTE));
+                CREATE_DATE = mCursor.getString(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_CREATE_DATE));
+                MODIFICATION_DATE = mCursor.getString(mCursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE));
+                if (flag == true) {
+                    write();
+                }
+                flag = false;
+            }
+        }
+
+        public void OutputOk(View v){
+            flag = true;
+            finish();
+        }
+
+        private void write() {
+            try {
+                // 如果手机插入了SD卡，而且应用程序具有访问SD的权限
+                if (Environment.getExternalStorageState().equals(
+                        Environment.MEDIA_MOUNTED)) {
+                    // 获取SD卡的目录
+                    File sdCardDir = Environment.getExternalStorageDirectory();
+                    //创建文件目录
+                    File targetFile = new File(sdCardDir.getCanonicalPath() + "/" + mName.getText() + ".txt");
+                    //写文件
+                    PrintWriter ps = new PrintWriter(new OutputStreamWriter(new FileOutputStream(targetFile), "UTF-8"));
+                    ps.println(TITLE);
+                    ps.println(NOTE);
+                    ps.println("创建时间：" + CREATE_DATE);
+                    ps.println("最后一次修改时间：" + MODIFICATION_DATE);
+                    ps.close();
+                    Toast.makeText(this, "保存成功,保存位置：" + sdCardDir.getCanonicalPath() + "/" + mName.getText() + ".txt", Toast.LENGTH_LONG).show();
+                }
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
