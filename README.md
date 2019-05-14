@@ -22,7 +22,7 @@
 
 1、NoteList中显示条目增加时间戳显示
 
-在notelist_item.xml布局中，添加显示时间的TextView
+在***notelist_item.xml***布局中，添加显示时间的TextView
 
     <TextView
         android:id="@+id/text1_time"
@@ -42,14 +42,14 @@
             NotePad.Notes.COLUMN_NAME_BACK_COLOR,
     };
 
-在NotePadProvider.java的insert方法中添加以下代码，以转换成我们需要的时间格式:
+在***NotePadProvider.java***的insert方法中添加以下代码，以转换成我们需要的时间格式:
 
         Long now = Long.valueOf(System.currentTimeMillis());
         Date date = new Date(now);
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
         String dateTime = format.format(date);
         
-同时在NoteEditor.java的updateNote方法中中添加以下代码，以转换更新笔记后的时间格式：
+同时在***NoteEditor.java***的updateNote方法中中添加以下代码，以转换更新笔记后的时间格式：
 
         Long now = Long.valueOf(System.currentTimeMillis());
         Date date = new Date(now);
@@ -59,9 +59,18 @@
 
 运行效果如图所示：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Lab_5_1_anew1.png">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/time.jpg">
 
 2、笔记查询功能（根据标题查询）
+
+在菜单文件***list_options_menu.xml***中添加一个搜索的item:
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="@string/menu_search"
+        android:icon="@android:drawable/ic_search_category_default"
+        android:showAsAction="always">
+    </item>
 
 ***note_search_list.xml***
 
