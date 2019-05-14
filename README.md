@@ -596,7 +596,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export1.jpg">
     
-点击进入笔记，在右上角三点菜单中找到Export导出笔记功能，点击，出现对话框：
+点击进入笔记，在右上角三点菜单中找到Export导出笔记功能，点击，出现对话框，此时可以编辑导出的文件名：
  
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export2.jpg">
     
@@ -604,7 +604,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export3.jpg">
     
-到保存位置去查看文件：
+到保存位置去查看导出的文件：
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedexport4_LI.jpg">
 
@@ -612,4 +612,40 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export5.jpg">
     
+### 5、笔记排序
 
+在菜单文件***list_options_menu.xml***中添加如下代码：
+
+    <item
+        android:id="@+id/menu_sort"
+        android:title="@string/menu_sort"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:showAsAction="always" >
+        <menu>
+            <item
+                android:id="@+id/menu_sort1"
+                android:title="@string/menu_sort1"/>
+            <item
+                android:id="@+id/menu_sort2"
+                android:title="@string/menu_sort2"/>
+            <item
+                android:id="@+id/menu_sort3"
+                android:title="@string/menu_sort3"/>
+        </menu>
+    </item>
+
+当选择排序图标：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/sort1.jpg">
+    
+当选择按创建时间升序排序：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/sort2.jpg">
+    
+当选择按修改时间降序排序（默认）：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/sort3.jpg">
+
+当选择按颜色排序：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/sort4.jpg">
