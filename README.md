@@ -72,7 +72,7 @@
 
 运行效果如图所示：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedtime_LI.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedtime1_LI.jpg">
 
 ### 2、笔记查询功能（根据标题查询）
 
