@@ -12,11 +12,19 @@
 
 1）UI美化
 
+更改主题颜色，美化UI界面；
+
 2）背景更换
+
+更改笔记背景颜色；
 
 3）导出笔记
 
+将笔记导出到手机存储，保存为txt文件；
+
 4）笔记排序
+
+按创建时间排序；按修改时间排序；按笔记背景颜色排序；
 
 ## 二、关键步骤及效果截图
 
@@ -32,7 +40,7 @@
         android:paddingLeft="5dip"
         android:textColor="@color/colorBlack"/>
 
-在PROJECTION中定义显示的时间，选择修改时间作为显示时间：
+在***NotePadProvider.java***的PROJECTION中定义显示的时间，选择修改时间作为显示时间：
 
      private static final String[] PROJECTION = new String[] {
             NotePad.Notes._ID, // 0
@@ -108,7 +116,7 @@
               NotesList.this.startActivity(intent);
               return true;
 
-新建***NoteSearch.java***activity,使NoteSearch继承ListActivity并实现SearchView.OnQueryTextListener接口,对SearchView文本变化设置监听，以动态地显示搜索结果：
+新建***NoteSearch.java***文件,使NoteSearch继承ListActivity并实现SearchView.OnQueryTextListener接口,对SearchView文本变化设置监听，以动态地显示搜索结果：
 
 public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextListener {
 
@@ -356,7 +364,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
     </LinearLayout>
 
-新建***NoteColor.java***Acitvity文件，用来选择颜色：
+新建***NoteColor.java***文件，用来选择颜色：
 
     public class NoteColor extends Activity {
 
@@ -493,7 +501,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
     </LinearLayout>
     
-新建一个***NoteExport.java***Activity，用来导出笔记：
+新建一个***NoteExport.java***，用来导出笔记：
 
     public class NoteExport extends Activity {
 
@@ -636,7 +644,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
 当选择排序图标：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/sort1.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedsort1_LI.jpg.jpg">
     
 当选择按创建时间升序排序：
 
