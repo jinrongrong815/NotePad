@@ -64,7 +64,7 @@
 
 运行效果如图所示：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/time.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedtime_LI.jpg">
 
 ### 2、笔记查询功能（根据标题查询）
 
@@ -276,7 +276,12 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
     
     新建笔记，默认背景色为白色,结合下一个功能可使背景色更换：
     
-    <>
+    <https://github.com/jinrongrong815/img_folder/blob/master/bg1.jpg>
+    
+    保存后：
+    
+    <https://github.com/jinrongrong815/img_folder/blob/master/bg2.jpg>
+    
     
 ### 4、背景更换
 
@@ -433,21 +438,23 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
     }
     
-修改笔记列表中名为背景色笔记的背景色：
+修改笔记列表中名为背景色测试笔记的背景色：
 
-<>
+<https://github.com/jinrongrong815/img_folder/blob/master/Inkedbg2_LI.jpg>
 
 选择修改颜色的图标:
 
-<>
+<https://github.com/jinrongrong815/img_folder/blob/master/Inkedbg3_LI.jpg>
 
 任选一种颜色，这里选择紫色，保存：
 
-<>
+<https://github.com/jinrongrong815/img_folder/blob/master/bg4.jpg>
+
+<https://github.com/jinrongrong815/img_folder/blob/master/bg41.jpg>
 
 返回笔记列表查看修改情况：
 
-<>
+<https://github.com/jinrongrong815/img_folder/blob/master/Inkedbg5_LI.jpg>
 
 ### 5、导出笔记
 
