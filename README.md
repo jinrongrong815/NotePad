@@ -644,7 +644,7 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
 
 当选择排序图标：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedsort1_LI.jpg.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedsort1_LI.jpg">
     
 当选择按创建时间升序排序：
 
