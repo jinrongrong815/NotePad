@@ -42,6 +42,11 @@
             NotePad.Notes.COLUMN_NAME_BACK_COLOR,
     };
 
+在dataColumns，viewIDs中补充时间部分：
+
+    private String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE } ;
+    private int[] viewIDs = { android.R.id.text1 , R.id.text1_time };
+
 在***NotePadProvider.java***的insert方法中添加以下代码，以转换成我们需要的时间格式:
 
         Long now = Long.valueOf(System.currentTimeMillis());
@@ -63,7 +68,7 @@
 
 2、笔记查询功能（根据标题查询）
 
-在菜单文件***list_options_menu.xml***中添加一个搜索的item:
+在菜单文件***list_options_menu.xml***中添加一个搜索的item，搜索图标用Android自带的图标:
 
     <item
         android:id="@+id/menu_search"
@@ -72,7 +77,11 @@
         android:showAsAction="always">
     </item>
 
-***note_search_list.xml***
+新建布局文件***note_search_list.xml***布局搜索页面，使用到了一个Android的搜索控件SearchView和一个ListView控件显示搜索结果列表：
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <SearchView
         android:id="@+id/search_view"
@@ -88,6 +97,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </ListView>
+
+    </LinearLayout>
+
+在***NoteList.java***中的onOptionsItemSelected方法中，找到switch并添加搜索的case语句:
+
+         case R.id.menu_search:
+              Intent intent = new Intent();
+              intent.setClass(NotesList.this,NoteSearch.class);
+              NotesList.this.startActivity(intent);
+              return true;
 
 对SearchView文本变化设置监听，使NoteSearch继承ListView并实现SearchView.OnQueryTextListener接口，以动态地显示搜索结果：
 
@@ -173,3 +192,12 @@ public class NoteSearch extends ListActivity  implements SearchView.OnQueryTextL
     }
 
 }
+
+搜索界面：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search1.jpg">
+
+搜索结果界面：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search2.jpg">
+
