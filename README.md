@@ -76,7 +76,7 @@
 
 ### 2、笔记查询功能（根据标题查询）
 
-在菜单文件***list_options_menu.xml***中添加一个搜索的item，搜索图标用Android自带的图标:
+在菜单文件***list_options_menu.xml***中添加一个搜索的item，搜索图标用自定义的搜索图标:
 
     <item
         android:id="@+id/menu_search"
@@ -198,6 +198,10 @@
         }
 
     }
+
+点击搜索图标：
+
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search0.jpg">
 
 搜索界面：
 
