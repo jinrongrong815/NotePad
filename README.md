@@ -367,14 +367,6 @@
             android:onClick="light_coral"/>
 
     </LinearLayout>
-    
-在***NoteEditor.java***中添加函数changeColor(),将uri信息传到新的activity：
-
-    private final void changeColor() {
-            Intent intent = new Intent(null,mUri);
-            intent.setClass(NoteEditor.this,NoteColor.class);
-            NoteEditor.this.startActivity(intent);
-    }
 
 新建***NoteColor.java***文件，用来选择颜色：
 
@@ -456,6 +448,14 @@
             finish();
         }
 
+    }
+    
+在***NoteEditor.java***中添加函数changeColor(),将uri信息传到***NoteColor.java*** activity：
+
+    private final void changeColor() {
+            Intent intent = new Intent(null,mUri);
+            intent.setClass(NoteEditor.this,NoteColor.class);
+            NoteEditor.this.startActivity(intent);
     }
     
 修改笔记列表中名为背景色测试笔记的背景色：
@@ -610,6 +610,14 @@
                 e.printStackTrace();
             }
         }
+    }
+    
+在***NoteEditor.java***中添加函数outputNote(),将uri信息传到***NoteExport.java*** activity：
+
+    private final void outputNote() {
+        Intent intent = new Intent(null,mUri);
+        intent.setClass(NoteEditor.this,NoteExport.class);
+        NoteEditor.this.startActivity(intent);
     }
     
 在笔记列表中选择需要导出的笔记，这里选择第二条笔记：
