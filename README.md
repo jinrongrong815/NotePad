@@ -207,7 +207,7 @@
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search1.jpg">
 
-搜索结果界面：
+搜索结果界面，找到你要查询的笔记点击进去即可查看编辑：
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search2.jpg">
 
@@ -450,7 +450,7 @@
 
     }
     
-在***NoteEditor.java***中添加函数changeColor(),将uri信息传到***NoteColor.java*** activity：
+在***NoteEditor.java***中添加函数changeColor(),将uri信息传到***NoteColor.java*** activity中：
 
     private final void changeColor() {
             Intent intent = new Intent(null,mUri);
@@ -612,7 +612,7 @@
         }
     }
     
-在***NoteEditor.java***中添加函数outputNote(),将uri信息传到***NoteExport.java*** activity：
+在***NoteEditor.java***中添加函数outputNote(),将uri信息传到***NoteExport.java*** activity中：
 
     private final void outputNote() {
         Intent intent = new Intent(null,mUri);
@@ -722,7 +722,7 @@
         setListAdapter(adapter);
         return true;
 
-当选择排序图标：
+选择排序图标：
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedsort1_LI.jpg">
     
