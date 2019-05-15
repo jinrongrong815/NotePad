@@ -474,7 +474,7 @@
 
 返回笔记列表查看修改情况：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedbg5_LI.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedbg5_L1.jpg">
 
 ### 5、导出笔记
 
