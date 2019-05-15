@@ -81,7 +81,7 @@
     <item
         android:id="@+id/menu_search"
         android:title="@string/menu_search"
-        android:icon="@android:drawable/ic_search_category_default"
+        android:icon="@drawable/search"
         android:showAsAction="always">
     </item>
 
@@ -203,7 +203,7 @@
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search0.jpg">
 
-搜索界面：
+进入搜索界面：
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/search1.jpg">
 
@@ -301,7 +301,7 @@
 
     <item android:id="@+id/menu_color"
         android:title="@string/menu_color"
-        android:icon="@drawable/color_logo"
+        android:icon="@drawable/color"
         android:showAsAction="always"/>
  
 新建布局文件***note_color.xml***，垂直线性布局放置7个ImageButton：
@@ -367,6 +367,14 @@
             android:onClick="light_coral"/>
 
     </LinearLayout>
+    
+在***NoteEditor.java***中添加函数changeColor(),将uri信息传到新的activity：
+
+    private final void changeColor() {
+            Intent intent = new Intent(null,mUri);
+            intent.setClass(NoteEditor.this,NoteColor.class);
+            NoteEditor.this.startActivity(intent);
+    }
 
 新建***NoteColor.java***文件，用来选择颜色：
 
