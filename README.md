@@ -662,6 +662,66 @@
         </menu>
     </item>
 
+在***NoteList.java***文件中的onOptionsItemSelected方法的switch下添加case：
+
+    //按创建时间排序
+    case R.id.menu_sort1:
+        cursor = managedQuery(
+                getIntent().getData(),            // Use the default content URI for the provider.
+                PROJECTION,                       // Return the note ID and title for each note. and modifcation date
+                null,                             // No where clause, return all records.
+                null,                             // No where clause, therefore no where column values.
+                NotePad.Notes._ID  // Use the default sort order.
+        );
+        adapter = new MyCursorAdapter(
+                this,
+                R.layout.noteslist_item,
+                cursor,
+                dataColumns,
+                viewIDs
+        );
+        setListAdapter(adapter);
+        return true;
+
+    //按修改时间排序
+    case R.id.menu_sort2:
+        cursor = managedQuery(
+                getIntent().getData(),            // Use the default content URI for the provider.
+                PROJECTION,                       // Return the note ID and title for each note. and modifcation date
+                null,                             // No where clause, return all records.
+                null,                             // No where clause, therefore no where column values.
+                NotePad.Notes.DEFAULT_SORT_ORDER // Use the default sort order.
+        );
+
+        adapter = new MyCursorAdapter(
+                this,
+                R.layout.noteslist_item,
+                cursor,
+                dataColumns,
+                viewIDs
+        );
+        setListAdapter(adapter);
+        return true;
+
+    //按颜色排序
+    case R.id.menu_sort3:
+        cursor = managedQuery(
+                getIntent().getData(),            // Use the default content URI for the provider.
+                PROJECTION,                       // Return the note ID and title for each note. and modifcation date
+                null,                             // No where clause, return all records.
+                null,                             // No where clause, therefore no where column values.
+                NotePad.Notes.COLUMN_NAME_BACK_COLOR // Use the default sort order.
+        );
+        adapter = new MyCursorAdapter(
+                this,
+                R.layout.noteslist_item,
+                cursor,
+                dataColumns,
+                viewIDs
+        );
+        setListAdapter(adapter);
+        return true;
+
 当选择排序图标：
 
 <image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedsort1_LI.jpg">
