@@ -634,7 +634,7 @@
     
 到保存位置去查看导出的文件：
 
-<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/Inkedexport4_LI.jpg">
+<image width=350 height=550 src="https://github.com/jinrongrong815/img_folder/blob/master/export4.jpg">
 
 打开文件：
 
